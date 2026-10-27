@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | SokoHub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="topbar">Free delivery on orders over $50 &bull; Shop from trusted vendors in one place</div>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Soko<span>Hub</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="vendors.html">Vendors</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          &#128722;<span class="cart-count">0</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Enter your details to complete your order</p>
+      </div>
+    </section>
+
+    <section class="section container">
+
+      <div class="empty-cart" id="checkout-empty" style="display: none;">
+        <span class="empty-icon">🛒</span>
+        <h2>Your cart is empty</h2>
+        <p>Add some products before you check out.</p>
+        <a href="products.html" class="btn btn-primary">Start Shopping</a>
+      </div>
+
+      <div class="checkout-layout" id="checkout-layout">
+
+        <form id="checkout-form" novalidate>
+
+          <div class="form-card">
+            <h2>Customer Information</h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="co-name">Full Name</label>
+                <input type="text" id="co-name" placeholder="e.g. Jane Wanjiru" autocomplete="name">
+                <small class="error-message" id="co-name-error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="co-email">Email Address</label>
+                <input type="email" id="co-email" placeholder="e.g. jane@email.com" autocomplete="email">
+                <small class="error-message" id="co-email-error"></small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="co-phone">Phone Number</label>
+              <input type="tel" id="co-phone" placeholder="e.g. 0712 345 678" autocomplete="tel">
+              <small class="error-message" id="co-phone-error"></small>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h2>Delivery Address</h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="co-address">Street Address</label>
+                <input type="text" id="co-address" placeholder="e.g. Moi Avenue, Apartment 4B" autocomplete="street-address">
+                <small class="error-message" id="co-address-error"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="co-city">City / Town</label>
+                <input type="text" id="co-city" placeholder="e.g. Nairobi" autocomplete="address-level2">
+                <small class="error-message" id="co-city-error"></small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="co-notes">Delivery Notes (optional)</label>
+              <textarea id="co-notes" rows="3" placeholder="Landmarks or delivery instructions..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h2>Payment Method</h2>
+
+            <div class="pay-options">
+              <label class="pay-option">
+                <input type="radio" name="payment" value="Pay on delivery" checked>
+                <span><strong>Pay on delivery</strong><small>Pay when your order arrives</small></span>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="payment" value="Mobile money">
+                <span><strong>Mobile money</strong><small>Pay with your mobile wallet</small></span>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="payment" value="Card">
+                <span><strong>Card</strong><small>Pay with a debit or credit card</small></span>
+              </label>
+            </div>
+
+            <p class="demo-note">This is a demo store. No real payment is taken.</p>
+          </div>
+
+          <label class="check-row">
+            <input type="checkbox" id="co-terms">
+            <span>I confirm that my order details are correct and I agree to the terms of sale.</span>
+          </label>
+          <small class="error-message" id="co-terms-error"></small>
+
+          <button type="submit" class="btn btn-primary btn-block checkout-submit">Confirm Order</button>
+
+        </form>
+
+        <aside class="summary-card" id="checkout-summary"></aside>
+
+      </div>
+
+      <div id="order-confirmation" style="display: none;"></div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid container">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Soko<span>Hub</span></a>
+        <p>One marketplace, many trusted vendors. Discover quality products from sellers you can rely on.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="vendors.html">Vendors</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: hello@sokohub.example</p>
+        <p>Phone: +254 700 000 000</p>
+        <p>Location: Nairobi, Kenya</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">X</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="copyright">&copy; 2026 SokoHub. All rights reserved.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
