@@ -5,11 +5,12 @@
 }
 
 :root {
-  --emerald: #059669;
-  --emerald-dark: #047857;
-  --emerald-light: #d1fae5;
+    --emerald: #7a1f3d;
+  --emerald-dark: #5a1530;
+  --emerald-light: #f6e4ea;
+  --success: #ce0c7d;
   --cream: #fbf6ea;
-  --navy: #14284b;
+  --navy: #111111;
   --white: #ffffff;
   --text: #1f2937;
   --gray: #6b7280;
@@ -240,7 +241,7 @@ img {
 }
 
 .footer a:hover {
-  color: #6ee7b7;
+  color: #e8a3b8;
 }
 
 .social-links {
@@ -310,7 +311,7 @@ img {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--emerald-dark), var(--emerald));
+   background: linear-gradient(135deg, #111111, var(--emerald-dark));
   color: var(--white);
   padding: 70px 0;
 }
@@ -510,10 +511,9 @@ img {
 }
 
 .promo-light .promo-tag {
-  background: rgba(5, 150, 105, 0.18);
+  background: rgba(122, 31, 61, 0.15);
   color: var(--emerald-dark);
 }
-
 /* ---------- Product cards ---------- */
 .product-grid {
   display: grid;
@@ -568,9 +568,9 @@ img {
 }
 
 .badge-sale {
-  background: var(--danger);
+  background: var(--white);
+  color: var(--emerald-dark);
 }
-
 .badge-out {
   background: var(--navy);
 }
@@ -641,7 +641,7 @@ img {
 }
 
 .in-stock {
-  color: var(--emerald);
+  color: var(--success);
 }
 
 .low-stock {
@@ -941,9 +941,8 @@ img {
 }
 
 .qty-control button:hover {
-  background: #a7f3d0;
+  background: #ecc9d4;
 }
-
 .qty-control input {
   width: 58px;
   padding: 10px 0;
